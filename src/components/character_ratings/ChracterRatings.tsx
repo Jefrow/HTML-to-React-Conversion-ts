@@ -8,8 +8,8 @@ type characterProps = {
 export const CharacterRatings = ({ characters }: characterProps) => {
   const tableHeadings = ['Name', 'Skillset', 'Votes'];
 
-  let tempCharacterArray = [...characters];
-  let topFiveChar = tempCharacterArray
+  const tempCharacterArray = [...characters];
+  const topFiveChar = tempCharacterArray
     .sort((charA, charB) => charB.votes - charA.votes)
     .slice(0, 5);
 
