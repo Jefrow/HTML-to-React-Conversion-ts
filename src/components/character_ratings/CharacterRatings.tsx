@@ -1,13 +1,12 @@
 import './CharacterRatings.css';
 import { Character } from '../../types';
 
-type characterProps = {
+type CharacterProps = {
   characters: Character[];
 };
 
-export const CharacterRatings = ({ characters }: characterProps) => {
-  const tableHeadings = ['Name', 'Skillset', 'Votes'];
-
+const tableHeadings = ['Name', 'Skillset', 'Votes'];
+export const CharacterRatings = ({ characters }: CharacterProps) => {
   const tempCharacterArray = [...characters];
   const topFiveChar = tempCharacterArray
     .sort((charA, charB) => charB.votes - charA.votes)

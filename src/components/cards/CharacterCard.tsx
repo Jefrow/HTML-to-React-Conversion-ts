@@ -5,7 +5,7 @@ type CharacterProps = {
   character: Character;
 };
 
-export const Card = ({
+export const CharacterCard = ({
   character: { name, nickName, imageUrl, background },
 }: CharacterProps) => {
   return (
